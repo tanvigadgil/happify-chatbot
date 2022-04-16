@@ -1,0 +1,139 @@
+version: "3.0"
+
+nlu:
+  - intent: what_is_brief_cope
+    examples: |
+      - What is Brief-Cope
+      - What Brief-Cope Questionnaire
+      - What is meant by Brief-Cope
+      - What is meant by the Brief-Cope method
+      - What is meant by the Brief-Cope evaluation
+      - Explain to me about the brief-Cope
+      - I don't understand what brief is
+  
+  - intent: what_are_the_types_of_coping_strategies
+    examples: |
+      - What are the types of coping strategies
+      - Types of coping strategies
+      - Is there a type of coping strategy
+      - In a coping strategy there are several types or types, for example anything
+      - What is the difference between Emotion-Focused Coping with Problem-Focused Coping
+
+  - intent: what_is_emotion_focused_coping
+    examples: |
+      - What is meant by emotion focused coping
+      - What is Emotion Focused Coping
+      - Understanding of Emotion Focused Coping
+      - Emotion focused coping is
+      - Explain what is meant by emotional focus coping
+  
+  - intent: what_is_problem_focused_coping
+    examples: |
+      - What is meant by problem focused coping
+      - What is a problem focused coping
+      - Definition of Problem Focused Coping
+      - Problem focused coping is
+      - Explain what is meant by coping the focus problem
+
+  - intent: how_to_choose_coping_strategy
+    examples: |
+      - How to find out the coping techniques
+      - How to find out coping techniques
+      - How to find out the suitable coping techniques
+      - How do I find out the coping technique that suits me
+      - How to find out the coping technique that suits me
+      - Approximately which is the coping technique that suits me
+
+  - intent: already_know_brief_cope
+    examples: |
+      - I already know the brief-Cope
+      - Yes, already know the brief-Cope
+      - Yes, I already know what Brief-Cope is
+      - Yes, I know what Brief-Cope is
+      - Yes, have already been with the Brief-Cope method
+
+  - intent: do_not_know_brief_cope
+    examples: |
+      - I don't know about Brief-Cope
+      - No, don't know about Brief-Cope
+      - No, I don't know what Brief-Cope is
+      - No, have never heard of the Brief-Cope method
+
+  - intent: start_brief_cope
+    examples: |
+      - Coping
+      - Coping Strategy
+      - Start evaluation of coping strategies
+      - How to determine the coping strategy
+      - How to determine coping strategy
+      - I want to evaluate the coping strategy
+      - I want to start an evaluation for a coping strategy
+
+  - intent: start_brief_cope_yes
+    examples: |
+      - Yes Coping Strategy Evaluation
+      - Yes, start evaluation now
+      - Ya start the coping strategy now
+      - Yes, start evaluation of coping strategies now
+
+  - intent: start_brief_cope_no
+    examples: |
+      - don't want to start the coping
+      - Don't want to start a coping strategy
+      - No, I don't want to start a coping strategy evaluation
+      - No, I don't want to start a coping strategy
+
+  - intent: stop_brief_cope
+    examples: |
+      - stop: brief cope
+      - stop: brief_cope
+      - stop: brief cope evaluation
+      - stop: brief_cope_evaluation
+
+  - intent: stop_brief_cope_yes
+    examples: |
+      - stop: brief cope - yes
+      - stop: brief_cope - yes
+      - stop: brief cope evaluation (yes)
+      - stop: brief_cope_evaluation (yes)
+
+  - intent: stop_brief_cope_no
+    examples: |
+      - stop: brief cope - no
+      - stop: brief_cope - no
+      - stop: brief cope evaluation (no)
+      - stop: brief_cope_evaluation (no)
+
+  - intent: get_brief_cope_result_histories
+    examples: |
+      - I want to see a history of coping strategy evaluation
+      - I want to see a history of coping strategy evaluation
+      - I want to see my coping strategy evaluation history
+      - Show Coping Strategy Evaluation History
+      - Please show a history of coping strategy evaluation
+      - Show all the results of my coping strategy evaluation
+      - Show all the results of the evaluation of my previous coping strategy
+
+  - intent: brief_cope_options_never
+    examples: |
+      - brief cope options: never
+      - brief-COPE options: never
+      - Brief-COPE options: never
+
+  - intent: brief_cope_options_sometimes
+    examples: |
+      - brief cope options: sometimes
+      - brief-COPE options: sometimes
+      - Brief-COPE options: sometimes
+
+  - intent: brief_cope_options_often
+    examples: |
+      - brief cope options: often
+      - brief-COPE options: often
+      - Brief-COPE options: often
+
+  - intent: brief_cope_options_always
+    examples: |
+      - brief cope options: always
+      - brief-COPE options: always
+      - Brief-COPE options: always

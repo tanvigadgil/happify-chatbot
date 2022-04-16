@@ -1,0 +1,34 @@
+version: "3.0"
+
+responses:
+  utter_ask_explore_mental_disorder_name:
+  - text: 'What mental disorders do you want to know? (Type with numbers)'
+
+  utter_user_stop_from_mental_disorder_auto_explanation:
+  - text: 'Well, maybe next time, if you still want to know about the problem of mental health problems, you can contact me back!'
+
+  utter_not_yet_learn_mental_disorder:
+  - text: "Sorry, I don't understand about the disorder."
+  - text: "Sorry, I haven't been trained to know about the disorder."
+
+  #when to consult
+  utter_mental_disorder.when_to_consult_mental_disorder:
+  - text: "Consult with a doctor or psychologist if you experience the symptoms of the disorder. Don't let your condition get worse."
+  
+  #preparation before consulting
+  utter_mental_disorder.preparation_before_consulting:
+  - text: "Before consulting a psychologist or doctor, you first prioritize what to do: \n
+      - Make a list of symptoms that appear. \n
+      - Record the history of diseases ever and be experienced. Likewise with family medical history. \n
+      - Record all drugs, supplements, herbal medicines, or vitamins consumed. \n
+      - Record the questions you want to ask for a doctor. \n
+      - Ask your family or friend to accompany when consulting a doctor. They can provide moral and helpful support given the information delivered by the doctor."
+
+  #during the consultation
+  utter_mental_disorder.during_the_consultation:
+  - text: "In a session, a psychologist or a doctor will ask the following: \n
+      - What are the symptoms you feel? \n
+      - When did the first symptoms appear? \n
+      - Do you have a risk factor related to the disorder? \n
+      - Do you routinely consume certain drugs? \n
+      - Have you ever been looking for medical help? If yes, what are the treatment you have tried?"

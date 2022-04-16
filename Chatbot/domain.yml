@@ -1,0 +1,452 @@
+version: "3.0"
+
+intents:
+  - greet
+  - leave
+  - initiate_bot_greet
+  - set_datepicker_dates
+  - affirm_yes
+  - ask_bot_who_are_you
+  - ask_bot_gender
+  - ask_bot_age
+  - ask_bot_location
+  - ask_bot_if_remember_user_name
+  - positive_feeling
+  - negative_feeling
+  - write_gratitude_yes
+  - write_gratitude_no
+  - share_thought_yes
+  - share_thought_no
+  - offer_other_method_yes
+  - offer_other_method_no  
+  - menu_options_help
+  - menu_options_mood_journaling
+  - menu_options_story_topics
+  - menu_options_explore_mental_disorders
+  - menu_options_brief_cope
+  - menu_options_about_mental_health
+  - what_is_brief_cope
+  - what_is_emotion_focused_coping
+  - what_is_problem_focused_coping
+  - what_are_the_types_of_coping_strategies
+  - how_to_choose_coping_strategy
+  - already_know_brief_cope
+  - do_not_know_brief_cope
+  - start_brief_cope
+  - start_brief_cope_yes
+  - start_brief_cope_no
+  - stop_brief_cope
+  - stop_brief_cope_yes
+  - stop_brief_cope_no
+  - get_brief_cope_result_histories
+  - brief_cope_options_never
+  - brief_cope_options_sometimes
+  - brief_cope_options_often
+  - brief_cope_options_always
+  - continue_explore_mental_disorders
+  - stop_explore_mental_disorders
+  - ask_mental_disorder_description
+  - ask_mental_disorder_types
+  - ask_mental_disorder_signs_and_symptoms
+  - ask_mental_disorder_causes
+  - ask_mental_disorder_diagnosis
+  - ask_mental_disorder_complications
+  - ask_mental_disorder_how_to_treat
+  - ask_mental_disorder_how_to_prevent
+  - ask_mental_disorder_when_to_consult
+  - ask_mental_disorder_preparation_before_consulting
+  - ask_mental_disorder_during_the_consultation
+  - suicide_terms
+  - suicide_terms_positive
+  - suicide_terms_negative
+  - suicide_terms_someone_else
+  - suicide_terms_unrecognized
+  - ensure_seek_help[crisis]_yes
+  - ensure_seek_help[crisis]_no
+  - mental_health_faq
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+forms:
+  get_name_user_form:
+    required_slots:
+      - name_user
+
+  get_user_positive_gratitude_form:
+    required_slots:
+      - user_positive_gratitude
+
+  get_user_negative_thought_form:
+    required_slots:
+      - user_negative_thought
+
+  get_brief_cope_answer_form:
+    required_slots:
+      - brief_cope_answer.score_1
+      - brief_cope_answer.score_2
+      - brief_cope_answer.score_3
+      - brief_cope_answer.score_4
+      - brief_cope_answer.score_5
+      - brief_cope_answer.score_6
+      - brief_cope_answer.score_7
+      - brief_cope_answer.score_8
+      - brief_cope_answer.score_9
+      - brief_cope_answer.score_10
+      - brief_cope_answer.score_11
+      - brief_cope_answer.score_12
+      - brief_cope_answer.score_13
+      - brief_cope_answer.score_14
+      - brief_cope_answer.score_15
+      - brief_cope_answer.score_16
+      - brief_cope_answer.score_17
+      - brief_cope_answer.score_18
+      - brief_cope_answer.score_19
+      - brief_cope_answer.score_20
+      - brief_cope_answer.score_21
+      - brief_cope_answer.score_22
+      - brief_cope_answer.score_23
+      - brief_cope_answer.score_24
+      - brief_cope_answer.score_25
+      - brief_cope_answer.score_26
+      - brief_cope_answer.score_27
+      - brief_cope_answer.score_28
+
+  get_explore_mental_disorder_name_form:
+    required_slots:
+      - explore_mental_disorder_name
+
+entities:
+  - name_user
+  - datepicker_dates
+  - user_positive_gratitude
+  - user_negative_gratitude
+  - user_negative_thought
+  - current_coping_strategy
+
+  #start - Brief-COPE attributes
+  - brief_cope_answer.score_1
+  - brief_cope_answer.score_2
+  - brief_cope_answer.score_3
+  - brief_cope_answer.score_4
+  - brief_cope_answer.score_5
+  - brief_cope_answer.score_6
+  - brief_cope_answer.score_7
+  - brief_cope_answer.score_8
+  - brief_cope_answer.score_9
+  - brief_cope_answer.score_10
+  - brief_cope_answer.score_11
+  - brief_cope_answer.score_12
+  - brief_cope_answer.score_13
+  - brief_cope_answer.score_14
+  - brief_cope_answer.score_15
+  - brief_cope_answer.score_16
+  - brief_cope_answer.score_17
+  - brief_cope_answer.score_18
+  - brief_cope_answer.score_19
+  - brief_cope_answer.score_20
+  - brief_cope_answer.score_21
+  - brief_cope_answer.score_22
+  - brief_cope_answer.score_23
+  - brief_cope_answer.score_24
+  - brief_cope_answer.score_25
+  - brief_cope_answer.score_26
+  - brief_cope_answer.score_27
+  - brief_cope_answer.score_28
+  #start - Brief-COPE attributes
+
+  - mental_disorder
+
+slots:
+  name_user:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: name_user
+
+  user_provided_name:
+    type: bool
+    influence_conversation: false
+    mappings:
+    - type: custom
+
+  #start - user express feeling
+  user_positive_gratitude:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: custom
+
+  user_negative_thought:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: custom
+  #end - user express feeling
+
+  #start - Brief-COPE attributes
+  current_coping_strategy:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: current_coping_strategy
+
+  brief_cope_answer.score_1:
+    type: any
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: brief_cope_answer.score_1
+
+  brief_cope_answer.score_2:
+    type: any
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: brief_cope_answer.score_2
+
+  brief_cope_answer.score_3:
+    type: any
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: brief_cope_answer.score_3
+
+  brief_cope_answer.score_4:
+    type: any
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: brief_cope_answer.score_4
+
+  brief_cope_answer.score_5:
+    type: any
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: brief_cope_answer.score_5
+
+  brief_cope_answer.score_6:
+    type: any
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: brief_cope_answer.score_6
+
+  brief_cope_answer.score_7:
+    type: any
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: brief_cope_answer.score_7
+
+  brief_cope_answer.score_8:
+    type: any
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: brief_cope_answer.score_8
+
+  brief_cope_answer.score_9:
+    type: any
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: brief_cope_answer.score_9
+
+  brief_cope_answer.score_10:
+    type: any
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: brief_cope_answer.score_10
+
+  brief_cope_answer.score_11:
+    type: any
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: brief_cope_answer.score_11
+
+  brief_cope_answer.score_12:
+    type: any
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: brief_cope_answer.score_12
+
+  brief_cope_answer.score_13:
+    type: any
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: brief_cope_answer.score_13
+
+  brief_cope_answer.score_14:
+    type: any
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: brief_cope_answer.score_14
+
+  brief_cope_answer.score_15:
+    type: any
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: brief_cope_answer.score_15
+
+  brief_cope_answer.score_16:
+    type: any
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: brief_cope_answer.score_16
+
+  brief_cope_answer.score_17:
+    type: any
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: brief_cope_answer.score_17
+
+  brief_cope_answer.score_18:
+    type: any
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: brief_cope_answer.score_18
+
+  brief_cope_answer.score_19:
+    type: any
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: brief_cope_answer.score_19
+
+  brief_cope_answer.score_20:
+    type: any
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: brief_cope_answer.score_20
+
+  brief_cope_answer.score_21:
+    type: any
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: brief_cope_answer.score_21
+
+  brief_cope_answer.score_22:
+    type: any
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: brief_cope_answer.score_22
+
+  brief_cope_answer.score_23:
+    type: any
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: brief_cope_answer.score_23
+
+  brief_cope_answer.score_24:
+    type: any
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: brief_cope_answer.score_24
+
+  brief_cope_answer.score_25:
+    type: any
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: brief_cope_answer.score_25
+
+  brief_cope_answer.score_26:
+    type: any
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: brief_cope_answer.score_26
+
+  brief_cope_answer.score_27:
+    type: any
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: brief_cope_answer.score_27
+
+  brief_cope_answer.score_28:
+    type: any
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: brief_cope_answer.score_28
+  #end - Brief-COPE attributes
+
+  explore_mental_disorder_name: #index number
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+
+  explore_mental_disorder_list:
+    type: list
+    influence_conversation: false
+    mappings:
+    - type: custom
+
+actions:
+  - action_user_logged_in
+  - action_inform_show_datepicker
+  - action_give_mindfullness_video
+  - action_brief_cope_result
+  - action_brief_cope_result_histories
+  - action_get_mental_disorder_list
+  - action_explore_mental_disorder_description
+  - action_explore_mental_disorder_types
+  - action_explore_mental_disorder_signs_and_symptoms
+  - action_explore_mental_disorder_causes
+  - action_explore_mental_disorder_diagnosis
+  - action_explore_mental_disorder_complications
+  - action_explore_mental_disorder_how_to_treat
+  - action_explore_mental_disorder_how_to_prevent
+  - action_get_mental_disorder_description
+  - action_get_mental_disorder_types
+  - action_get_mental_disorder_causes
+  - action_get_mental_disorder_signs_and_symptoms
+  - action_get_mental_disorder_diagnosis
+  - action_get_mental_disorder_complications
+  - action_get_mental_disorder_how_to_treat
+  - action_get_mental_disorder_how_to_prevent
+  - action_reset_brief_cope_evaluation
+  - action_reset_explore_mental_disorder
+  - validate_get_name_user_form
+  - validate_get_explore_mental_disorder_name_form
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

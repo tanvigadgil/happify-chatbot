@@ -1,0 +1,129 @@
+version: "3.0"
+
+responses:
+  utter_mental_health_faq/the_mean_of_having_mental_illness:
+  - text: "Mental diseases or disorders are health conditions that disturb the thinking, emotions, relationships, and everyday functions of someone. They are related to distress and reduced capacity to engage in ordinary activities of everyday life. \n
+  Mental illness also consists of its severity. Some are quite mild and just disturb some aspects of life, such as certain phobias. On the other hand, serious mental illness can lead to key functional disorders in everyday life. These include disorders such as severe depression, schizophrenia, and bipolar disorders, and may require that person to receive care at the hospital. \n \n
+  It is important to know that mental illness is a medical condition disrupts his/her relationship with character, intelligence, or willingness. Just like diabetes is a pancreatic disorder, mental illness is a medical condition caused by brain biology. Similar to  how someone will treat diabetes with drugs like insulin, mental illness can be treated with a combination of drugs and social support. This care is very effective, with 70-90 percent of individuals who receive treatment experiencing symptom reduction and improving quality of life. With the right handling, it is possible for people with mental disorders to be independent and successful"
+  
+  utter_mental_health_faq/causes_of_mental_illness:
+  - text: "Mental illness does not discriminate. It can attack anyone regardless of sex, age, income, social status, ethnicity, religion, sexual orientation, or background. Although mental illness can attack anyone, certain conditions are possible. More generally occur in different populations. For example, eating disorders tend to occur more often in women, while disorders such as disorders of concentration/hyperactivity more occur in children. Besides that all ages are vulnerable, but younger and older people are more vulnerable. \n
+  Mental illness usually attacks individuals at the top of their lives, with 75 percent of mental health conditions that are developing at the age of 24 years. This makes identification and treatment of mental disorders become very difficult, because normal personalities and behavioral changes in adolescence can cover symptoms of mental disorders (a mental health condition). Parents and caregivers must be aware of this fact, and pay attention to changes in mood, personality, personal habits, and withdrawal of their children. When this happens to children under 18 years, they are referred to as serious emotional disorders or serious emotional disturbance (SEDS)"
+  
+  utter_mental_health_faq/warning_signs_of_mental_illness:
+  - text: "Symptoms of mental health disorders vary depending on the type and severity of their conditions. The following is a list of common symptoms that might show mental health problems, especially when some symptoms are expressed at once: \n \n
+
+      In adults: \n
+      \u2022 confused mind \n
+      \u2022 sadness or irritability which lasts for longer period of time \n
+      \u2022 extreme changes in moods (up and down) \n
+      \u2022 fear \n
+      \u2022 worries or excessive anxiety \n
+      \u2022 social withdrawal \n
+      \u2022 dramatic changes in eating habits or sleep \n
+      \u2022 strong angry feelings \n
+      \u2022 delusions or hallucinations \n
+      \u2022 increased inability to overcome problems and daily activities \n
+      \u2022 thinking about committing suicide \n
+      \u2022 numerous physical problems \n
+      \u2022 drug abuse and/or alcohol \n \n
+
+      In older children and pre-teenagers: \n
+      \u2022 drug abuse and/or alcohol \n
+      \u2022 inability to overcome problems and daily activities \n
+      \u2022 changes in sleep habits and/or eat \n
+      \u2022 opposed authority, skipping school, stealing, or damaging property \n
+      \u2022 intense fear of gain weight \n
+      \u2022 negative mood that lasts a long time, often accompanied by bad appetite and thoughts about death \n
+      \u2022 an explosion of anger that occurs often \n \n
+
+      In younger children: \ n
+      \u2022 changes in school performance \n
+      \u2022 bad performance even though there is a hard effort \n
+      \u2022 worries or excessive anxiety \n
+      \u2022 hyperactive \n
+      \u2022 constant nightmares \n
+      \u2022 continuous disobedience and/or aggressive behavior \n
+      \u2022 being angry often"
+
+  utter_mental_health_faq/can_mental_illness_recovered:
+  - text: "In the healing process of mental illnesses, early identification and treatment is very important. Based on the nature of the disease, there are various effective treatments available. For all types of care, it is important for people affected to be proactive and fully involved in their own recovery process. Many people with mental illnesses who are diagnosed and treated respond well, although some may experience the return of symptoms. Even in such cases, with careful monitoring and managing disturbances, it is still very possible to live a satisfying and productive life"
+  
+  utter_mental_health_faq/someone_who_have_mental_illness:
+  - text: "Even though this application cannot replace professional advice, I suggest those who have symptoms to talk to their friends and family members and seek advice from mental health professionals. The faster the mental health conditions are identified and treated, the faster they can get to recovery. If you know someone who is having a problem, don't assume that the problem will be solved by itself. Tell them that you care about them, and that there is a choice of treatments available that will help them recover. Talk to mental health professionals or counselors if you think friends or family members experience symptoms of mental health. If the person you love has symptoms until the impact of mental disorders, they need to know that you support them, thus they mighwill ask for help to professional experts."
+
+  utter_mental_health_faq/how_to_find_mental_health_professional:
+  - text: 'Feeling comfortable with professionals who work with you or your relatives is very important for the success of the treatment. Finding professionals that best suits your needs may require research.Start by looking for providers in your area.'
+
+  utter_mental_health_faq/available_treatment_options:
+  - text: 'Just like there are various types of drugs for physical illness, different treatment options are available for individuals with mental illness. Treatment works differently for different people.Important to find what is most suitable for you or your other relatives.'
+
+  utter_mental_health_faq/involved_in_treatment:
+  - text: "The beginning of treatment is a big step for individuals and families and can feel overwhelmed. It is important to accompany and get involved in the treatment process as often as possible. There are some questions that you need to answer, which include: \n
+    \u2022 What is known about the causes of this particular disease? \n
+    \u2022 Is there another diagnosis where these symptoms usually occur? \n
+    \u2022 Do you usually include a physical or neurological examination? \n
+    \u2022 Is there an additional test or an exam that you will recommend now? \n
+    \u2022 Will you suggest an independent opinion of another psychiatrist at this time? \n
+    \u2022 What treatment programs are most helpful with this diagnosis? \n
+    \u2022 Does this program involve services from other specialists? If so, who will be responsible for coordinating this service? \n
+    \u2022 What do you see as a family role in this treatment program? \n
+    \u2022 How much access does family owned against individuals who provide care? \n
+    \u2022 What drugs are usually used for this diagnosis? \n
+    \u2022 How much experience do you have in caring for individuals with this disease? \n
+    \u2022 What can I do to help you in the treatment?" 
+
+  utter_mental_health_faq/mental_health_professional_diffrences:
+  - text: "There are many types of professionals in the field of mental health providers and services. They maybe confusing for those of us who have not yet known each of these professionals having various levels of education, training, and may have different fields of expertise. Find professionals who best suit your needs. It may need some research."
+  
+  utter_mental_health_faq/where_else_to_get_help:
+  - text: "Where you seek help will depend on the nature of the problem and/or symptoms and what is most suitable for you. Often, the best place to start is by talking to someone you trust about your worries, like family members, friends, pastors, health service providers, or other professionals. Having social support is very important in healing from mental illness, and you will be able to ask them for referrals or recommendations for trusted mental health practitioners. Find mental health resources in your area. \n \n
+  Maybe you can start from where you provide services to talk, listen, and help you do care. In addition, many people consider peer support to help your recovery. There are various organizations that offer support groups or support systems and some of these support groups are led by peers while others may be led by mental health professionals."
+  
+  utter_mental_health/before_starting_new_medication:
+  - text: "The best source of information about medicine is a doctor who prescribes it. They should be able to answer questions asked by patients like this:
+        1. What should be done about the drug? \n
+        2. When will the drug start reacting, and how do I know that the drug is effective? \n
+        3. How do I take the medicine and how long do I have to take it? Food, drinks, other drugs, and what activities should be avoided while taking the drug? \n
+        4. What are the side effects of the drug and what should be done if the side effects occur? \n
+        5. What should I do if one dose of the drug is missed? \n
+        6. Is there written information available about the drug? \n
+        7. Are there other drugs that might be appropriate? If yes, why are you (doctor) preferring this drug? \n
+        8. How do you (doctor) monitor treatment and what symptoms indicate that the drug must be raised, lowered, or changed? \n \n
+        All drugs must be taken according to the instructions. Most drugs for mental illness do not work if taken irregularly, and additional doses can cause severe side effects and are sometimes dangerous. Many psychiatric drugs begin to have beneficial effects only after consuming for several weeks"
+  
+  utter_mental_health/is_after_taking_medication_cured:
+  - text: "Frequently people stop taking medicine when they feel the symptoms are under control. Others may choose to stop taking medication because of the side effects, without realizing that most of the side effects can be managed effectively. Even though it might seem reasonable to stop taking medicine, the problem is, most often the symptoms will return. If you or your relatives are taking medicine, it is very important for you to work with your doctor before making decisions about any changes in your care. \n
+  The other problem being,  by stopping treatment, especially to stop it suddenly, you might experience symptoms of broken medicine. It can be very unpleasant if you and your doctor feel your drug trial is a good idea. It is necessary to slow down the dose of the drug so that these symptoms do not occur. \n \n 
+  It is important for your doctor and pharmacist to work together to make sure your medication works safely and effectively. You have to talk to them about what you do and if there are side effects which makes you not want to continue treatment. They will work with you to develop a strategy to minimize these side effects, or will make a plan to switch to other more suitable treatments"
+  
+#   utter_mental_health/get_help_for_paying_medication:
+#   - text: "Now you can use the BPJS health that can deal with mental disorders. The service provided is counseling at first-rate health facilities, namely at the Puskesmas. Launching Official Internal Media BPJS Health, there is a procedure that must be done first to get this service. Here are the steps that are
+#       You can follow \ n \ n
+      
+#       \ U2022 First of all, BPJS participants must check themselves to the first level health centers or health facilities or primary facts and clinics in collaboration with BPJS Health \ N
+#       \ U2022 After the examination, if it is declared necessary to get further handling, the doctor will give a reference to advanced level health facilities. Usually to the Regional General Hospital (RSUD) or a special hospital, such as a mental hospital. With this service, mental health should be no longer the thing that just ignored \ n
+      
+#       Please note, interference or problems in mental health are not a strange thing especially disgrace. Not different from physical conditions, psychological health conditions can also be disrupted. There are many factors that can be the cause of this occurring, including social environmental factors or traumatic experiences that are before. For more information
+#       can see https://www.halodoc.com/artikel/perawatan-kesehatan-mental-bisa-diklaim-di-bpjs"
+  
+  utter_mental_health/find_the_right_therapy:
+  - text: "Various types of therapy are more effective based on the nature of the condition and/or symptoms of mental health and people who experience it (for example, children will benefit from the therapist who specializes in children's mental health). However, there are several types of care and therapy that can help."
+
+  utter_mental_health/learn_types_of_mental_health_treatment:
+  - text: "Mental health conditions are often treated with treatment, therapy or combination of both. However, there are many types of treatments available including complementary & alternative treatments, self-help plans, and peer support. Personal care must be discussed by people with mental health and their team."
+
+  utter_mental_health/diffrent_types_of_mental_health_professionals:
+  - text: 'There are many types of mental health professionals. Finding the right for you might need some research.'
+
+  utter_mental_health/find_support_group:
+  - text: 'Many people consider peer support as a useful tool that can help their recovery. There are various organizations that offer support groups for consumers, family members and their friends. Some support groups are led by peers, while others may be led by a mental health professional.'
+
+  utter_mental_health/find_inpatient_care:
+  - text: 'If you or someone you know is in a crisis, hospitalization care can help. Inpatient care can help people stabilize new treatments, adjust to new symptoms, or get the help they need'
+
+  utter_mental_health/find_other_local_services:
+  - text: 'Many services can be used to help you find mental health care in your community, especially using the internet. This information can help you find the right therapist, and allow you to better understand the choice of proper treatment and treatment process.'
+
+  utter_mental_health/learn_more_about_clinical_trials:
+  - text: 'Sometimes, consumers of mental health services can consider participating in research studies when they do not experience improvement even though they have tried various treatments and care.Research Studies (also known as clinical trials) may involve the use of new drugs or new treatment approaches that security and effectiveness are being tested. Even though we support innovation in the field, consumers must be warned that there are risks associated with clinical trials, make sure you know it before registering.'

@@ -1,0 +1,199 @@
+version: "3.0"
+
+nlu:    
+  - intent: greet
+    examples: |
+      - hi
+      - hey
+      - hello
+      - how are you
+
+  - intent: leave
+    examples: |
+      - bye
+      - goodbye
+      - see you again
+      - until found
+
+  - intent: initiate_bot_greet
+    examples: |
+      - initiate-bot-greet
+      - initiate_bot_greet
+      - initiate_bot_greet
+      - initiate_bot-greet
+
+  - intent: set_datepicker_dates
+    examples: |
+      - datepicker dates: [2021-1-11/2022-2-18](datepicker_dates)
+      - datepicker_dates: [2021-1-12/2022-2-17](datepicker_dates)
+
+  - intent: affirm_yes
+    examples: |
+      - affirm: yes
+      - affirm_yes
+
+  #emotions
+  - intent: positive_feeling
+    examples: |
+      - I'm feeling happy
+      - I'm happy again
+      - My feeling is currently happy
+      - I feel happy because
+      - My condition is happy
+      - I feel that I need to be a creative person
+      - I don't feel that more anxiety isn't around me
+      - I feel that I'm on the right track
+      - I am happy because my plan is working according to my expectations
+      - I am feeling grateful
+
+  - intent: negative_feeling
+    examples: |
+      - I'm feeling sad
+      - I am very sad
+      - My feeling I experienced is scared
+      - I am very angry because
+      - I feel humiliated
+      - I can change from feeling very desperate to be very full of hope just by being around someone who cares about me
+      - I feel very annoyed
+      - I feel annoyed lately don't know why
+      - I feel that I am quite sad at all times
+      - I feel very overwhelling
+
+  - intent: write_gratitude_yes
+    examples: |
+      - write gratitude: yes
+      - write_gratitude: yes
+
+  - intent: write_gratitude_yes
+    examples: |
+      - write gratitude: no
+      - write_gratitude: no
+
+  - intent: share_thought_yes
+    examples: |
+      - share thought: yes
+      - share_thought: yes
+
+  - intent: share_thought_no
+    examples: |
+      - share thought: no
+      - share_thought: no
+
+  - intent: offer_other_method_yes
+    examples: |
+      - offer other method: yes
+      - offer_other_method: yes
+
+  - intent: offer_other_method_no
+    examples: |
+      - offer other method: no
+      - offer_other_method: no
+
+  #menu options
+  - intent: menu_options_help
+    examples: |
+      - menu options: help
+      - menu_options: help
+      - help: menu options
+      - help: menu_options
+
+  - intent: menu_options_mood_journaling
+    examples: |
+      - menu options: mood journaling
+      - menu options: mood
+      - menu options: journaling
+      - menu_options: mood journaling
+      - menu_options: mood_journaling
+
+  - intent: menu_options_story_topics
+    examples: |
+      - menu options: story topics
+      - menu options: story topic
+      - menu options: topics
+      - menu options: topic
+      - menu_options: story topics
+      - menu_options: story_topics
+
+  - intent: menu_options_brief_cope
+    examples: |
+      - menu options: brief cope
+      - menu options: brief
+      - menu options: cope
+      - menu_options: brief cope
+      - menu_options: brief_cope
+  
+  - intent: menu_options_explore_mental_disorders
+    examples: |
+      - menu options: mental disorders
+      - menu options: mental
+      - menu options: disorders
+      - menu_options: mental disorders
+      - menu_options: mental_disorders
+
+  - intent: menu_options_about_mental_health
+    examples: |
+      - menu options: about mental health
+      - menu options: mental health
+      - menu options: about mental
+      - menu_options: about_health
+      - menu_options: about_mental_health
+
+  - intent: continue_explore_mental_disorders
+    examples: |
+      - explore mental disorders: continue
+      - explore_mental_disorders: continue
+      - explore-mental-disorders: continue
+      - explore/mental/disorders: continue
+
+  - intent: stop_explore_mental_disorders
+    examples: |
+      - explore mental disorders: stop
+      - explore_mental_disorders: stop
+      - explore-mental-disorders: stop
+      - explore/mental/disorders: stop
+
+  #suicide terms
+  - intent: suicide_terms
+    examples: |
+      - Suicide
+      - Want to commit suicide
+      - Feeling unworthy in this world
+      - Want to disappear from this world
+      - Want to end my life
+      - Can not stand life in this world
+      - Want to hurt yourself
+      - Want to stab yourself
+      - Want to hang yourself
+      
+  - intent: suicide_terms_positive
+    examples: |
+      - Yes, I'm thinking about "things"
+      - I really have a thought to do that
+
+  - intent: suicide_terms_negative
+    examples: |
+      - No, I'm not thinking about "things"
+      - I have no thought to do that
+
+  - intent: suicide_terms_someone_else
+    examples: |
+      - other people plan to do "things"
+      - Other people experience emergency situations
+      - Other people in an emergency
+
+  - intent: suicide_terms_unrecognized
+    examples: |
+      - I'm not saying that "thing"
+      - I don't mention the "thing"
+      - I don't talk about "things"
+      - I don't lead at all "there"
+
+  - intent: ensure_seek_help[crisis]_yes
+    examples: |
+      - make sure you contact them
+      - Immediately contact them
+
+  - intent: ensure_seek_help[crisis]_no
+    examples: |
+      - I don't want to contact them
+      - I don't have to contact them

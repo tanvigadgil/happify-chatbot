@@ -1,0 +1,28 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-datepicker_dates",
+      "2": "I-datepicker_dates",
+      "3": "L-datepicker_dates",
+      "4": "U-datepicker_dates",
+      "5": "B-mental_disorder",
+      "6": "I-mental_disorder",
+      "7": "L-mental_disorder",
+      "8": "U-mental_disorder",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-datepicker_dates": 1,
+      "I-datepicker_dates": 2,
+      "L-datepicker_dates": 3,
+      "U-datepicker_dates": 4,
+      "B-mental_disorder": 5,
+      "I-mental_disorder": 6,
+      "L-mental_disorder": 7,
+      "U-mental_disorder": 8,
+      "O": 0
+    },
+    "num_tags": 9
+  }
+]

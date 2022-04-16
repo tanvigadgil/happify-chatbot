@@ -1,0 +1,221 @@
+version: "3.0"
+
+stories: 
+  - story: bot introduction
+    steps: 
+    - intent: greet
+    - action: utter_greet
+    # - action: get_name_user_form
+    # - active_loop: get_name_user_form
+    # - active_loop: null
+    # - action: action_user_logged_in
+    # - action: utter_greet
+    - action: utter_ask_user_feeling
+
+
+  #start - user response with positive feeling
+  - story: user response with positive feeling
+    steps:
+    - intent: positive_feeling
+    - action: utter_user_positive_feeling.response
+    - action: utter_ask_user_to_write_gratitude
+  
+  #user write gratitude - yes
+  - story: user want to write gratitude
+    steps:
+    - intent: write_gratitude_yes
+    - action: get_user_positive_gratitude_form
+    - active_loop: get_user_positive_gratitude_form
+    - active_loop: null
+    - action: utter_after_write_gratitude.response
+    - action: utter_ask_user_what_can_be_helped
+
+  #user write gratitude - no
+  - story: user dont want to write gratitude
+    steps:
+    - intent: write_gratitude_no
+    - action: utter_user_dont_want_to_write_gratitude.response
+    - action: utter_benefit_of_writing_gratitude
+    - action: utter_ask_user_what_can_be_helped
+  #end - user response with positive feeling
+
+
+  #start - user response with negative feeling
+  - story: user response with negative feeling
+    steps:
+    - intent: negative_feeling
+    - action: utter_user_negative_feeling.response
+    - action: utter_ask_user_to_share_thought
+
+  #user share their thought - yes
+  - story: user want to share their thought
+    steps:
+    - intent: share_thought_yes
+    - action: get_user_negative_thought_form
+    - active_loop: get_user_negative_thought_form
+    - active_loop: null
+    - action: utter_user_after_share_thought.response
+    - action: utter_ask_user_what_can_be_helped
+  
+  #user share their thought - no
+  - story: user dont want to share their thought
+    steps:
+    - intent: share_thought_no
+    - action: utter_user_dont_want_share_thought.response
+    - action: utter_suggest_user_other_method.confirmation
+  
+  #user other suggested method - yes
+  - story: user want other suggested method
+    steps:
+    - intent: offer_other_method_yes
+    - action: utter_mindfullness_description.response_1
+    - action: utter_mindfullness_description.response_2
+    - action: utter_mindfullness_description.response_3
+    - action: utter_mindfullness_description.response_4
+    - action: action_give_mindfullness_video
+    - action: utter_mindfullness_end_description.response
+    - intent: affirm_yes
+    - action: utter_ask_user_what_can_be_helped
+
+  #user other suggested method - no
+  - story: user dont want other suggested method
+    steps:
+    - intent: offer_other_method_no
+    - action: utter_user_dont_want_other_method.response
+    - intent: affirm_yes
+    - action: utter_ask_user_what_can_be_helped
+  #end - user response with negative feeling
+
+
+  #start - bot provide menu options
+  - story: user choose menu options - about mood journaling
+    steps:
+    - intent: menu_options_mood_journaling
+    - action: utter_menu_options_mood_journaling.response_1
+    - action: utter_menu_options_mood_journaling.response_2
+    - action: utter_menu_options_mood_journaling.response_3
+    - action: utter_ask_user_what_can_be_helped
+
+  # - story: user choose menu options - story topics
+  #   steps:
+  #   - intent: menu_options_story_topics
+  #   - action: utter_menu_options_story_topics.response_1
+  
+  - story: user choose menu options - brief cope
+    steps:
+    - intent: menu_options_brief_cope
+    - action: utter_how_to_choose_coping_strategy.response_1
+    - action: utter_start_brief_cope.confirmation
+
+  - story: user choose menu options - explore mental disorders
+    steps:
+    - intent: menu_options_explore_mental_disorders
+    - action: utter_menu_options_explore_mental_disorders.response
+    - action: action_get_mental_disorder_list
+    - action: get_explore_mental_disorder_name_form
+    - active_loop: get_explore_mental_disorder_name_form
+    - active_loop: null
+    
+    - action: action_explore_mental_disorder_description #short description
+    - intent: continue_explore_mental_disorders
+    
+    - action: action_explore_mental_disorder_types #types
+    - intent: continue_explore_mental_disorders 
+    
+    - action: action_explore_mental_disorder_signs_and_symptoms #signs and symptoms
+    - intent: continue_explore_mental_disorders 
+    
+    - action: action_explore_mental_disorder_causes #causes
+    - intent: continue_explore_mental_disorders
+    
+    - action: action_explore_mental_disorder_diagnosis #diagnosis
+    - intent: continue_explore_mental_disorders
+    
+    - action: action_explore_mental_disorder_complications #complications
+    - intent: continue_explore_mental_disorders
+    
+    - action: action_explore_mental_disorder_how_to_treat #how to treat
+    - intent: continue_explore_mental_disorders
+    
+    - action: action_explore_mental_disorder_how_to_prevent #how to prevent
+    
+    - action: utter_after_explore_mental_disorders.response
+    - intent: affirm_yes
+    - action: utter_you_are_welcome
+    - action: action_reset_explore_mental_disorder
+    - action: utter_ask_user_what_can_be_helped
+
+  - story: user choose menu options - about mental health
+    steps:
+    - intent: menu_options_about_mental_health
+    - action: utter_menu_options_about_mental_health.response
+    - action: utter_ask_user_what_can_be_helped
+  #end - bot provide menu options 
+
+
+  #start - emergency situation path
+  - story: ask user if really in emergency situation
+    steps:
+    - intent: suicide_terms
+    - action: utter_suicide_terms.confirmation_1
+    - action: utter_suicide_terms.confirmation_2
+  
+  #user in emergency situation
+  - story: user in emergency situation
+    steps:
+    - intent: suicide_terms_positive
+    - action: utter_suicide_terms.positive_response_1
+    - checkpoint: provide_suicide_hotline_information
+
+  #user not in emergency situation
+  - story: user not in emergency situation
+    steps:
+    - intent: suicide_terms_negative
+    - action: utter_suicide_terms.negative_response_1
+    - action: utter_suicide_terms.negative_response_2
+    - action: utter_ask_user_what_can_be_helped
+
+  #user friends or families in emergency situation
+  - story: user friends or families in emergency situation
+    steps: 
+    - intent: suicide_terms_someone_else
+    - action: utter_suicide_terms.someone_else_response_1
+    - checkpoint: provide_suicide_hotline_information
+
+  #bot missunderstood about suicide terms
+  - story: bot missunderstood about suicide terms
+    steps:
+    - intent: suicide_terms_unrecognized
+    - action: utter_suicide_terms.unrecognized_response_1
+    - action: utter_suicide_terms.unrecognized_response_2
+    - action: utter_suicide_terms.unrecognized_response_3
+
+  #provide user suicide hotline information
+  - story: provide user suicide hotline information
+    steps:
+    - checkpoint: provide_suicide_hotline_information
+    - action: utter_suicide_terms.positive_response_2
+    - action: utter_suicide_terms.positive_response_3
+    - action: utter_suicide_terms.hotline_1
+    - action: utter_suicide_terms.hotline_2
+    - action: utter_suicide_terms.hotline_3
+    - action: utter_suicide_terms.hotline_4
+    - action: utter_suicide_terms.hotline_5
+    - action: utter_ensure_seek_help.crisis_confirmation
+
+  #ensure user to call hotline for seek help
+  - story: user seek help
+    steps:
+    - intent: ensure_seek_help[crisis]_yes
+    - action: utter_ensure_seek_help.crisis_response_1
+    - action: utter_ensure_seek_help.crisis_response_3
+    - action: utter_suicide_terms.quotes  
+    - action: utter_ensure_seek_help.crisis_response_4
+    - action: utter_ask_user_what_can_be_helped
+
+  - story: user dont want to seek help
+    steps:
+    - intent: ensure_seek_help[crisis]_no
+    - action: utter_ensure_seek_help.crisis_response_2
+    - action: utter_ask_user_what_can_be_helped
+  #end - emergency situation path

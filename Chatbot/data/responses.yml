@@ -1,0 +1,299 @@
+version: "3.0"
+
+responses:
+  utter_default:
+  - text: "Sorry, I don't understand what you mean. Please rephrase what you said"
+  - text: "Sorry, I don't understand what you mean. Please rephrase"
+
+  utter_greet:
+  - text: 'Hi'
+  - text: 'hello'
+  - text: 'Hi there'
+  - text: 'Hello there'
+
+  utter_you_are_welcome:
+  - text: 'Equally, happy to be able to help'
+  - text: 'Thank you again, glad to help you too'
+
+  utter_leave:
+  - text: 'Bye'
+  - text: 'Bye-bye'
+  - text: 'Goodbye'
+  - text: 'See you again'
+
+  #start - bot introduction
+  utter_bot_introduction:
+  # - condition: 
+  #   - type: slot
+  #     name: user_provided_name
+  #     value: true
+  #   text: 'Halo {name_user}. Senang bertemu dengan kamu lagi'  
+  
+  - text: 'Hello there, I am here as your mental health friend who is ready to help you at any time if needed!'
+  - text: "Hi there, I am here as your mental health friend. I'm ready to help you at any time if needed"
+
+  utter_ask_name_user:
+  - text: "What's your name?"
+  - text: 'I should call you with what name?'
+
+  utter_submit_name_user_form:
+  - text: "Okay, I'll call you with the name {name_user}.Nice to meet you!"
+  - text: "Alright I'll call you with the name {name_user}. Just send regards!"
+
+  utter_ask_user_condition:
+  - text: 'How are you?'
+  - text: 'What do you feel now?'
+  - text: 'How are you today?'
+  - text: 'How do you feel now?'
+  #end - bot introduction
+
+
+  #start - bot ask about user feelings right now
+  utter_ask_user_feeling:
+  - text: "How is your situation right now? I hope you're fine"
+    buttons:
+    - title: "I'm fine"
+      payload: '/positive_feeling'
+    - title: "I'm not fine"
+      payload: '/negative_feeling'
+
+  utter_ask_user_to_write_gratitude:
+  - text: 'Do you want to release a sense of gratitude or thank you for today?'
+    buttons:
+    - title: 'Yes'
+      payload: '/write_gratitude_yes'
+    - title: 'No'
+      payload: '/write_gratitude_no'
+
+  utter_ask_user_positive_gratitude:
+  - text: 'Well, write whatever you want to be grateful below'
+
+  utter_ask_user_to_share_thought:
+  - text: "Do you want to get it out? You can talk to me freely, I'll keep your privacy."
+    buttons:
+    - title: 'Yes'
+      payload: '/share_thought_yes'
+    - title: 'No'
+      payload: '/share_thought_no'
+
+  utter_ask_user_negative_thought:
+  - text: 'Okay, write what you want to remove below here'
+
+  #response
+  utter_user_positive_feeling.response:
+  - text: 'That is great, keep your condition like this!'
+
+  utter_after_write_gratitude.response:
+  - text: 'Thank you for writing what you want to be grateful for today, with you writing like this can help you to be more grateful for your life. Without realizing it this can make you happier you know!'
+
+  utter_user_dont_want_to_write_gratitude.response:
+  - text: "It is okay if you don't want to write it down, maybe next time"
+
+  utter_benefit_of_writing_gratitude:
+  - text: "Just giving information that by writing gratitude you get the following benefits: \n
+      1. Reducing the stress level: \n
+         Someone who is grateful have a tendency to keep oneself better, practice healthy living habits, and have good stress management skills. \n
+      2. Getting a new perspective: \n
+         By writing the Gratitude Journal, we can start observing and seeing patterns about what we think is important in life. This can help us appreciate every little thing we experience and face. \n
+         In addition, the way we see a situation depends on the perspective we use. When we choose to look for things to be grateful, our perspective in seeing something will change and we are able to realize things that have never been thought of before. \n
+      3. Give rise to self-awareness: \n
+         Knowing any important thing in life can help you to be more mindfull in deciding something. You can be someone who is wiser in making decisions because you understand what you really like. \n
+         This can help you sort things when you have to make a choice. You can be a person who is not easily washed away on the current by following what many people are followed by most people. \n
+      4. As a reminder in a difficult time: \n
+         Without the Gratitude Journal, you will have trouble remembering what good things you have experienced. Especially when in difficult times, anyone can easily dissolve in sadness and forget other things that can be grateful" 
+
+  utter_user_negative_feeling.response:
+  - text: 'I am concerned that you are experiencing a situation like this. It must be very difficult for your situation.'
+  
+  utter_user_after_share_thought.response:
+  - text: "Thank you for sharing your thoughts. Let's me say this as your friend who is always there for you. Even though I'm just a robot that doesn't have emotions like humans, I will always listen and won't judge the story you are telling."
+  
+  utter_user_dont_want_share_thought.response:
+  - text: "It's okay if you don't want to tell me, but if you want to tell me, it may be able to help release your burdens."
+
+  utter_suggest_user_other_method.confirmation:
+  - text: 'I know several ways to relieve stress. Do you want to hear it? Maybe in this way it can help you get past that period!'
+    buttons:
+    - title: 'Yes'
+      payload: '/offer_other_method_yes'
+    - title: 'No'
+      payload: '/offer_other_method_no'
+  
+  utter_user_dont_want_other_method.response:
+  - text: "Okay, if you want to ask me, I'm always here"
+    buttons:
+    - title: 'Yes, thank you!'
+      payload: '/affirm_yes'
+  #end - bot ask about user feelings right now
+
+
+  #start - mindfullness guide
+  utter_mindfullness_description.response_1:
+  - text: 'This is one of the meditation techniques that are widely used by many people, moreover this technique is trendy among teenagers. The technique is known as Mindfulness.'
+
+  utter_mindfullness_description.response_2:
+  - text: 'Mindfulness is a meditation that trains someone to focus on the situation(state) around them. This Mindfullness meditation has various benefits for the body, physical health, and mental health.'
+
+  utter_mindfullness_description.response_3:
+  - text: 'Mindfullness meditation can be done by anyone without special requirements. This type of meditation can also be done anytime and anywhere, both at home, office, or meditation class.'
+
+  utter_mindfullness_description.response_4:
+  - text: "Actually there are many simple ways to do Mindfullness and everyone has their respective preferences. I know 4 forms of Mindfullness exercises, such as: \n
+      1. Attention: \n
+         Try to spend a moment to pay attention to the environment using all the five senses owned. Starting from touch, voice, vision, smell, and taste. \n
+         For example when you eat your favorite food. Before eating, try smelling the aroma, feel, until it's really enjoyed. \n
+      2. Focus on present: \n
+         The next mindfulness exercise is to try to focus on what happens to your life right now. Try to pay attention and accept what is already in life. So you will find excitement and pleasure though simple. \n
+      3. Accept yourself: \n
+         Another form of mindfulness meditation that is good for the body is to accept oneself as it is. Treat yourself as a good friend figure. \n
+      4. Focus on breathing: \n
+         When you have negative thoughts, try to sit, take a deep breath and close your eyes. Focus on breathing in and out in the body. Even though your breathing exercises are for just one minute, still this can make you more calm. So negative thoughts can be appeased."
+
+  utter_mindfullness_end_description.response:
+  - text: 'Hopefully, the information I gave can help you do this mindfulness exercise, the key is to be patient and continue to practice.'
+    buttons:
+    - title: 'Yes, thank you'
+      payload: '/affirm_yes'
+  #end - mindfullness guide
+
+
+  #start - bot provides menu options
+  utter_ask_user_what_can_be_helped:
+  - text: 'What can I do for you?'
+    buttons:
+    - title: 'What is mood journaling?'
+      payload: '/menu_options_mood_journaling'
+    # - title: 'Bercerita mengenai suatu topik tertentu'
+    #   payload: '/menu_options_story_topics'
+    - title: 'How to determine suitable coping strategies or techniques?'
+      payload: '/menu_options_brief_cope'
+    - title: 'Explore mental disorders'
+      payload: '/menu_options_explore_mental_disorders'
+    - title: 'Ask about mental health disorders'
+      payload: '/menu_options_about_mental_health'
+    - title: 'Bye'
+      payload: '/leave'
+  
+  #response
+  utter_menu_options_mood_journaling.response_1:
+  - text: 'Mood journaling is the activity to record your emotions everyday through the journal. You can record any emotion that you feel on that day, whatever you think, and what caused them. Usually equipments that are needed to be prepared is only a notebook and pen or colored markers.'
+  
+  utter_menu_options_mood_journaling.response_2:
+  - text: "Recording the occurrence of everyday feelings have impressive changes. Many people do not expect if journaling can be useful for mental health. Journaling can also be done as therapy and relaxation when done routinely. Here are some benefits of journaling for mental health: \n
+    \u2022 Identify external and internal triggers that cause mood changes. \n
+    \u2022 Learn more about the influence of factors such as sleep, diet, and daily activities on moods. \n
+    \u2022 Help find patterns and understand mood changes. \n
+    \u2022 Help determine the type of treatment that can help improve mood."
+
+  utter_menu_options_mood_journaling.response_3:
+  - text: 'On the application you use this feature, you can use it for your daily mood Journal.'
+
+  utter_menu_options_story_topics.response_1:
+  - text: 'Still in the process of developing.'
+
+  utter_menu_options_explore_mental_disorders.response:
+  - text: 'It looks like you want to know about mental disorders. I will give a list of mental disorders that I understand.'
+  
+  utter_after_explore_mental_disorders.response:
+  - text: 'That was the explanation of the mental disorder that I knew, if you want to know the others, you can ask me again. Hopefully I can help!'
+    buttons:
+    - title: 'Yes, thank you'
+      payload: '/affirm_yes'
+
+  utter_menu_options_about_mental_health.response:
+  - text: 'Do you want to ask about mental health or disorder?'
+  #end - bot provides menu options
+
+
+  #start - suicide terms
+  #confirmation
+  utter_suicide_terms.confirmation_1:
+  - text: 'My emergency system has been triggered because I have detected emergency conditions. Are you thinking about ending it?'
+
+  utter_suicide_terms.confirmation_2:
+  - text: 'Sorry if I am wrong about you mean, but I think it would be nice if I asked you.'
+    buttons:
+    - title: "Yes, I'm thinking about ending it"
+      payload: '/suicide_terms_positive'
+    - title: "No, I don't think ending it"
+      payload: '/suicide_terms_negative'
+    - title: 'Others'
+      payload: '/suicide_terms_someone_else'
+    - title: 'What? Not at all'
+      payload: '/suicide_terms_unrecognized'
+  
+  utter_ensure_seek_help.crisis_confirmation:
+  - text: 'Make sure you contact them immediately!'
+    buttons:
+    - title: "I've contacted"
+      payload: '/ensure_seek_help[crisis]_yes'
+    - title: 'No, I do not want to'
+      payload: '/ensure_seek_help[crisis]_no'
+  
+  #response
+  #positive
+  utter_suicide_terms.positive_response_1:
+  - text: "I'm sorry because you have to go through a difficult situation like this. I strongly suggest that you immediately seek help to professional experts who can help you in a situation like this."
+
+  utter_suicide_terms.positive_response_2:
+  - text: 'Situation is outside of my ability, because I was not programmed to help about things like this.'
+
+  utter_suicide_terms.positive_response_3:
+  - text: 'You can contact these people using the following information'
+
+  #negative
+  utter_suicide_terms.negative_response_1:
+  - text: 'Okay, if you need help information about suicide, you can contact me again'
+
+  utter_suicide_terms.negative_response_2:
+  - text: 'I will help provide information as much as possible so you can get through the situation. I hope you are always fine'
+
+  #someone else
+  utter_suicide_terms.someone_else_response_1:
+  - text: "I'm sorry that the person you know is going through a difficult situation like this. I strongly suggest that you immediately seek help to professional experts who can help you in a situation like this."
+
+  #unrecognized
+  utter_suicide_terms.unrecognized_response_1:
+  - text: 'Alright if so, sorry for this misunderstanding'
+
+  utter_suicide_terms.unrecognized_response_2:
+  - text: 'I have been taught to recognize words or sentences that look sensitive, such as "suicide" or "die".'
+
+  utter_suicide_terms.unrecognized_response_3:
+  - text: 'Therefore, the sentence can trigger my emergency system.'
+
+  #crisis
+  utter_ensure_seek_help.crisis_response_1:
+  - text: "Thank God you contacted them, hopefully you're fine now."
+
+  utter_ensure_seek_help.crisis_response_2:
+  - text: 'Contacting the service hotline can connect you talk to someone or help channel to help you cross the situation like this.'
+
+  utter_ensure_seek_help.crisis_response_3:
+  - text: 'There is a saying that says:'
+
+  utter_ensure_seek_help.crisis_response_4:
+  - text: 'Remember the sentence when you are thinking about it'
+
+  #hotline information
+  utter_suicide_terms.hotline_1:
+  - text: "1. KIRAN, India's first national mental health helpline number - 1800-599-0019"
+
+  utter_suicide_terms.hotline_2:
+  - text: "2. Tata Institute of Social Sciences (TISS) - 022-25521111 (Monday-Saturday, 8am to 10pm)"
+  
+  utter_suicide_terms.hotline_3:
+  - text: "3. ROSHNI - (+914) 066202000"
+  
+  utter_suicide_terms.hotline_4:
+  - text: '4. NIMHANS - 080 4611 0007'
+
+  utter_suicide_terms.hotline_5:
+  - text: '5. If the situation that is being passed is now very threatening to salvation, immediately contact the 112 emergency number or go to the emergency unit at the local hospital. Do not wait'
+
+  #quotes
+  utter_suicide_terms.quotes:
+  - text: "\"For anyone who is injured, asking for help not you know that you are weak. But it is precisely that you are strong.\"- Barrack Obama."
+  - text: "\"No matter how far you walk, as long as you don't stop.\"- Conficus."
+  - text: "\"The brave thing I've ever done is continuing to live when I want to die.\"- Juliette Lewis."
+  #end - suicide terms

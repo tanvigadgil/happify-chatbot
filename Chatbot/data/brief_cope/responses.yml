@@ -1,0 +1,467 @@
+version: "3.0"
+
+responses:
+  #confirmation
+  utter_start_brief_cope.confirmation:
+  - text: 'Do you want to start the evaluation of coping strategies?'
+    buttons:
+    - title: 'Yes'
+      payload: '/start_brief_cope_yes'
+    - title: 'No'
+      payload: '/start_brief_cope_no'
+  
+  #response
+  utter_explain_brief_cope.response[explanation_1]:
+  - text: "The Brief-Cope is a self-report questionnaire consisting of 28 items designed to measure effective and ineffective ways of \"coping\" the state or a stressful life event"
+
+  utter_explain_brief_cope.response[explanation_2]:
+  - text: "\"Coping\" itself is widely defined as an effort used to minimize stress that affects the experience of life"
+
+  utter_types_of_coping_strategy.response_1:
+  - text: "The coping strategy for everyone can vary depending on each personality and the type and source of stress experienced. But in general psychologists distinguish the coping strategy into the two main categories, namely Emotion-Focused Coping and problem-focused coping"
+
+  utter_types_of_coping_strategy.response[emotion_focused_coping]:
+  - text: "Emotion-focused Coping is one type of coping mechanism that focuses on your emotional condition. The trick is to reduce the negative emotional response from a condition caused by stress, for example feeling embarrassed, anxious, fearful, grieving, and frustrating. \n 
+  This strategy is the only way that applies coping capabilities when stress sources cannot be controlled. But sometimes, the emotion-focused coping strategy actually makes you procrastinate to overcome the source of the problem. \n
+  This is less effective in resolving long-term problems. This strategy is also dangerous when the problem you face requires immediate handling.For example, early treatment of chronic diseases and financial problems In addition, emotion-focused coping strategy can also be destructive or actually add problems and stress."
+
+  utter_types_of_coping_strategy.response[problem_focused_coping]:
+  - text: "Problem-focused coping is the best coping strategy. This method does not only focus on stress levels, but also at the root of the problem of the stress. This means that you can overcome stress as well as the trigger using this one coping mechanism. \n
+  You don't necessarily have to apply for this strategy for every situation. This method is actually the most effective to overcome stress sources from work or pressure while achieving a purpose. \n
+  For example, stress because of losing a relative that you care about or depression because of something that cannot be changed, you can only overcome the emotion-focused coping. In implementing this one coping mechanism, there are three important things that you must pay attention to, namely, problem solving abilities, good time management, and social support around you."
+
+  utter_how_to_choose_coping_strategy.response_1:
+  - text: 'To determine which coping strategy or technique is suitable, you can first evaluate the brief-Cope and coincidences in the design to handle it'
+
+  utter_how_to_choose_coping_strategy.response_2:
+  - text: 'Firstly, have you ever heard of the Brief-Cope method?'
+    buttons:
+    - title: 'Yes'
+      payload: '/already_know_brief_cope'
+    - title: 'Never'
+      payload: '/do_not_know_brief_cope'
+
+  utter_already_know_brief_cope.response:
+  - text: 'Good if you already know what the Brief-Cope method is. Because this method can help you to determine the suitable coping strategy for you'
+
+  utter_start_brief_cope.response[confirm_yes]:
+  - text: 'Good, evaluation for coping strategies will begin. This evaluation consists of 28 questions that you must answer. This evaluation will use the measuring method, the Brief-Cope. Keep in mind that honest answers will determine the accuracy of the evaluation results.'
+
+  utter_start_brief_cope.response[confirm_no]:
+  - text: 'Well, you can anytime to evaluate the coping strategy.'
+
+  utter_end_brief_cope.response[finish]:
+  - text: 'The Brief-Cope Questionnaire has been completed, I will calculate it and you will be able to see the results below. Thank you, you have been strong to fill the questionnaire'
+
+  utter_end_brief_cope.response[notes_1]:
+  - text: 'To determine which coping strategy might suit you can see from the highest value of 3 coping strategies'
+
+  utter_end_brief_cope.response[notes_2]:
+  - text: "Notes: \n
+  For problem-focused, high scores indicates a coping strategy intended to change stress situations and show psychological strength, fortitude and practical approach to solving problems faced. \n
+  For emotion-focused, high scores indicate a coping strategy that aims to regulate emotions related to stress situations. High or low score has nothing to do with psychological health or poor health, but can be used to inform a broader formulation about someone's coping style. \n
+  For avoidants, high scores show physical or cognitive effort to break away from stressors, while for low is usually indicating adaptive coping (good coping)."
+
+  utter_user_stop_brief_cope.confirmation:
+  - text: 'Looks like you want to quit this evaluation'
+    buttons:
+      - title: 'Yes, stop now'
+        payload: '/stop_brief_cope_yes'
+      - title: 'No, continue'
+        payload: '/stop_brief_cope_no'
+
+  utter_user_stop_brief_cope.response[confirm_no]:
+  - text: 'Okay, I will continue for the next question, then.'
+
+  #questions
+  utter_ask_brief_cope_answer.score_1:
+  - text: "I've been turning to work or other activities to take my mind off things."
+    buttons:
+    - title: 'Never'
+      payload: '/brief_cope_options_never{{ "brief_cope_answer.score_1": 1 }}'
+    - title: 'Sometimes'
+      payload: '/brief_cope_options_sometimes{{ "brief_cope_answer.score_1": 2 }}'
+    - title: 'Often'
+      payload: '/brief_cope_options_often{{ "brief_cope_answer.score_1": 3 }}'
+    - title: 'Always'
+      payload: '/brief_cope_options_always{{ "brief_cope_answer.score_1": 4 }}'
+    - title: 'Stop here'
+      payload: '/stop_brief_cope'
+
+  utter_ask_brief_cope_answer.score_2:
+  - text: "I've been concentrating my efforts on doing something about the situation I'm in."
+    buttons:
+    - title: 'Never'
+      payload: '/brief_cope_options_never{{ "brief_cope_answer.score_2": 1 }}'
+    - title: 'Sometimes'
+      payload: '/brief_cope_options_sometimes{{ "brief_cope_answer.score_2": 2 }}'
+    - title: 'Often'
+      payload: '/brief_cope_options_often{{ "brief_cope_answer.score_2": 3 }}'
+    - title: 'Always'
+      payload: '/brief_cope_options_always{{ "brief_cope_answer.score_2": 4 }}'
+    - title: 'Stop here'
+      payload: '/stop_brief_cope'
+
+  utter_ask_brief_cope_answer.score_3:
+  - text: "I've been saying to myself \"this isn't real\"."
+    buttons:
+    - title: 'Never'
+      payload: '/brief_cope_options_never{{ "brief_cope_answer.score_3": 1 }}'
+    - title: 'Sometimes'
+      payload: '/brief_cope_options_sometimes{{ "brief_cope_answer.score_3": 2 }}'
+    - title: 'Often'
+      payload: '/brief_cope_options_often{{ "brief_cope_answer.score_3": 3 }}'
+    - title: 'Always'
+      payload: '/brief_cope_options_always{{ "brief_cope_answer.score_3": 4 }}'
+    - title: 'Stop here'
+      payload: '/stop_brief_cope'
+
+  utter_ask_brief_cope_answer.score_4:
+  - text: "I've been using alcohol or other drugs to make myself feel better."
+    buttons:
+    - title: 'Never'
+      payload: '/brief_cope_options_never{{ "brief_cope_answer.score_4": 1 }}'
+    - title: 'Sometimes'
+      payload: '/brief_cope_options_sometimes{{ "brief_cope_answer.score_4": 2 }}'
+    - title: 'Often'
+      payload: '/brief_cope_options_often{{ "brief_cope_answer.score_4": 3 }}'
+    - title: 'Always'
+      payload: '/brief_cope_options_always{{ "brief_cope_answer.score_4": 4 }}'
+    - title: 'Stop here'
+      payload: '/stop_brief_cope'
+
+  utter_ask_brief_cope_answer.score_5:
+  - text: "I've been getting emotional support from others."
+    buttons:
+    - title: 'Never'
+      payload: '/brief_cope_options_never{{ "brief_cope_answer.score_5": 1 }}'
+    - title: 'Sometimes'
+      payload: '/brief_cope_options_sometimes{{ "brief_cope_answer.score_5": 2 }}'
+    - title: 'Often'
+      payload: '/brief_cope_options_often{{ "brief_cope_answer.score_5": 3 }}'
+    - title: 'Always'
+      payload: '/brief_cope_options_always{{ "brief_cope_answer.score_5": 4 }}'
+    - title: 'Stop here'
+      payload: '/stop_brief_cope'
+
+  utter_ask_brief_cope_answer.score_6:
+  - text: "I've been giving up trying to deal with it."
+    buttons:
+    - title: 'Never'
+      payload: '/brief_cope_options_never{{ "brief_cope_answer.score_6": 1 }}'
+    - title: 'Sometimes'
+      payload: '/brief_cope_options_sometimes{{ "brief_cope_answer.score_6": 2 }}'
+    - title: 'Often'
+      payload: '/brief_cope_options_often{{ "brief_cope_answer.score_6": 3 }}'
+    - title: 'Always'
+      payload: '/brief_cope_options_always{{ "brief_cope_answer.score_6": 4 }}'
+    - title: 'Stop here'
+      payload: '/stop_brief_cope'
+
+  utter_ask_brief_cope_answer.score_7:
+  - text: "I've been taking action to try to make the situation better."
+    buttons:
+    - title: 'Never'
+      payload: '/brief_cope_options_never{{ "brief_cope_answer.score_7": 1 }}'
+    - title: 'Sometimes'
+      payload: '/brief_cope_options_sometimes{{ "brief_cope_answer.score_7": 2 }}'
+    - title: 'Often'
+      payload: '/brief_cope_options_often{{ "brief_cope_answer.score_7": 3 }}'
+    - title: 'Always'
+      payload: '/brief_cope_options_always{{ "brief_cope_answer.score_7": 4 }}'
+    - title: 'Stop here'
+      payload: '/stop_brief_cope'
+
+  utter_ask_brief_cope_answer.score_8:
+  - text: "I've been refusing to believe that it has happened."
+    buttons:
+    - title: 'Never'
+      payload: '/brief_cope_options_never{{ "brief_cope_answer.score_8": 1 }}'
+    - title: 'Sometimes'
+      payload: '/brief_cope_options_sometimes{{ "brief_cope_answer.score_8": 2 }}'
+    - title: 'Often'
+      payload: '/brief_cope_options_often{{ "brief_cope_answer.score_8": 3 }}'
+    - title: 'Always'
+      payload: '/brief_cope_options_always{{ "brief_cope_answer.score_8": 4 }}'
+    - title: 'Stop here'
+      payload: '/stop_brief_cope'
+
+  utter_ask_brief_cope_answer.score_9:
+  - text: "I've been saying things to let my unpleasant feelings escape."
+    buttons:
+    - title: 'Never'
+      payload: '/brief_cope_options_never{{ "brief_cope_answer.score_9": 1 }}'
+    - title: 'Sometimes'
+      payload: '/brief_cope_options_sometimes{{ "brief_cope_answer.score_9": 2 }}'
+    - title: 'Often'
+      payload: '/brief_cope_options_often{{ "brief_cope_answer.score_9": 3 }}'
+    - title: 'Always'
+      payload: '/brief_cope_options_always{{ "brief_cope_answer.score_9": 4 }}'
+    - title: 'Stop here'
+      payload: '/stop_brief_cope'
+
+  utter_ask_brief_cope_answer.score_10:
+  - text: "I've been getting help and advice from other people."
+    buttons:
+    - title: 'Never'
+      payload: '/brief_cope_options_never{{ "brief_cope_answer.score_10": 1 }}'
+    - title: 'Sometimes'
+      payload: '/brief_cope_options_sometimes{{ "brief_cope_answer.score_10": 2 }}'
+    - title: 'Often'
+      payload: '/brief_cope_options_often{{ "brief_cope_answer.score_10": 3 }}'
+    - title: 'Always'
+      payload: '/brief_cope_options_always{{ "brief_cope_answer.score_10": 4 }}'
+    - title: 'Stop here'
+      payload: '/stop_brief_cope'
+
+  utter_ask_brief_cope_answer.score_11:
+  - text: "I've been using alcohol or other drugs to help me get through it."
+    buttons:
+    - title: 'Never'
+      payload: '/brief_cope_options_never{{ "brief_cope_answer.score_11": 1 }}'
+    - title: 'Sometimes'
+      payload: '/brief_cope_options_sometimes{{ "brief_cope_answer.score_11": 2 }}'
+    - title: 'Often'
+      payload: '/brief_cope_options_often{{ "brief_cope_answer.score_11": 3 }}'
+    - title: 'Always'
+      payload: '/brief_cope_options_always{{ "brief_cope_answer.score_11": 4 }}'
+    - title: 'Stop here'
+      payload: '/stop_brief_cope'
+
+  utter_ask_brief_cope_answer.score_12:
+  - text: "I've been trying to see it in a different light, to make it seem more positive."
+    buttons:
+    - title: 'Never'
+      payload: '/brief_cope_options_never{{ "brief_cope_answer.score_12": 1 }}'
+    - title: 'Sometimes'
+      payload: '/brief_cope_options_sometimes{{ "brief_cope_answer.score_12": 2 }}'
+    - title: 'Often'
+      payload: '/brief_cope_options_often{{ "brief_cope_answer.score_12": 3 }}'
+    - title: 'Always'
+      payload: '/brief_cope_options_always{{ "brief_cope_answer.score_12": 4 }}'
+    - title: 'Stop here'
+      payload: '/stop_brief_cope'
+
+  utter_ask_brief_cope_answer.score_13:
+  - text: "I've been criticizing myself."
+    buttons:
+    - title: 'Never'
+      payload: '/brief_cope_options_never{{ "brief_cope_answer.score_13": 1 }}'
+    - title: 'Sometimes'
+      payload: '/brief_cope_options_sometimes{{ "brief_cope_answer.score_13": 2 }}'
+    - title: 'Often'
+      payload: '/brief_cope_options_often{{ "brief_cope_answer.score_13": 3 }}'
+    - title: 'Always'
+      payload: '/brief_cope_options_always{{ "brief_cope_answer.score_13": 4 }}'
+    - title: 'Stop here'
+      payload: '/stop_brief_cope'
+
+  utter_ask_brief_cope_answer.score_14:
+  - text: "I've been trying to come up with a strategy about what to do."
+    buttons:
+    - title: 'Never'
+      payload: '/brief_cope_options_never{{ "brief_cope_answer.score_14": 1 }}'
+    - title: 'Sometimes'
+      payload: '/brief_cope_options_sometimes{{ "brief_cope_answer.score_14": 2 }}'
+    - title: 'Often'
+      payload: '/brief_cope_options_often{{ "brief_cope_answer.score_14": 3 }}'
+    - title: 'Always'
+      payload: '/brief_cope_options_always{{ "brief_cope_answer.score_14": 4 }}'
+    - title: 'Stop here'
+      payload: '/stop_brief_cope'
+
+  utter_ask_brief_cope_answer.score_15:
+  - text: "I've been getting comfort and understanding from someone."
+    buttons:
+    - title: 'Never'
+      payload: '/brief_cope_options_never{{ "brief_cope_answer.score_15": 1 }}'
+    - title: 'Sometimes'
+      payload: '/brief_cope_options_sometimes{{ "brief_cope_answer.score_15": 2 }}'
+    - title: 'Often'
+      payload: '/brief_cope_options_often{{ "brief_cope_answer.score_15": 3 }}'
+    - title: 'Always'
+      payload: '/brief_cope_options_always{{ "brief_cope_answer.score_15": 4 }}'
+    - title: 'Stop here'
+      payload: '/stop_brief_cope'
+
+  utter_ask_brief_cope_answer.score_16:
+  - text: "I've been giving up the attempt to cope."
+    buttons:
+    - title: 'Never'
+      payload: '/brief_cope_options_never{{ "brief_cope_answer.score_16": 1 }}'
+    - title: 'Sometimes'
+      payload: '/brief_cope_options_sometimes{{ "brief_cope_answer.score_16": 2 }}'
+    - title: 'Often'
+      payload: '/brief_cope_options_often{{ "brief_cope_answer.score_16": 3 }}'
+    - title: 'Always'
+      payload: '/brief_cope_options_always{{ "brief_cope_answer.score_16": 4 }}'
+    - title: 'Stop here'
+      payload: '/stop_brief_cope'
+
+  utter_ask_brief_cope_answer.score_17:
+  - text: "I've been looking for something good in what is happening."
+    buttons:
+    - title: 'Never'
+      payload: '/brief_cope_options_never{{ "brief_cope_answer.score_17": 1 }}'
+    - title: 'Sometimes'
+      payload: '/brief_cope_options_sometimes{{ "brief_cope_answer.score_17": 2 }}'
+    - title: 'Often'
+      payload: '/brief_cope_options_often{{ "brief_cope_answer.score_17": 3 }}'
+    - title: 'Always'
+      payload: '/brief_cope_options_always{{ "brief_cope_answer.score_17": 4 }}'
+    - title: 'Stop here'
+      payload: '/stop_brief_cope'
+
+  utter_ask_brief_cope_answer.score_18:
+  - text: "I've been making jokes about it."
+    buttons:
+    - title: 'Never'
+      payload: '/brief_cope_options_never{{ "brief_cope_answer.score_18": 1 }}'
+    - title: 'Sometimes'
+      payload: '/brief_cope_options_sometimes{{ "brief_cope_answer.score_18": 2 }}'
+    - title: 'Often'
+      payload: '/brief_cope_options_often{{ "brief_cope_answer.score_18": 3 }}'
+    - title: 'Always'
+      payload: '/brief_cope_options_always{{ "brief_cope_answer.score_18": 4 }}'
+    - title: 'Stop here'
+      payload: '/stop_brief_cope'
+
+  utter_ask_brief_cope_answer.score_19:
+  - text: "I've been doing something to think about it less, such as going to movies, watching TV, reading, daydreaming, sleeping, or shopping."
+    buttons:
+    - title: 'Never'
+      payload: '/brief_cope_options_never{{ "brief_cope_answer.score_19": 1 }}'
+    - title: 'Sometimes'
+      payload: '/brief_cope_options_sometimes{{ "brief_cope_answer.score_19": 2 }}'
+    - title: 'Often'
+      payload: '/brief_cope_options_often{{ "brief_cope_answer.score_19": 3 }}'
+    - title: 'Always'
+      payload: '/brief_cope_options_always{{ "brief_cope_answer.score_19": 4 }}'
+    - title: 'Stop here'
+      payload: '/stop_brief_cope'
+
+  utter_ask_brief_cope_answer.score_20:
+  - text: "I've been accepting the reality of the fact that it has happened."
+    buttons:
+    - title: 'Never'
+      payload: '/brief_cope_options_never{{ "brief_cope_answer.score_20": 1 }}'
+    - title: 'Sometimes'
+      payload: '/brief_cope_options_sometimes{{ "brief_cope_answer.score_20": 2 }}'
+    - title: 'Often'
+      payload: '/brief_cope_options_often{{ "brief_cope_answer.score_20": 3 }}'
+    - title: 'Always'
+      payload: '/brief_cope_options_always{{ "brief_cope_answer.score_20": 4 }}'
+    - title: 'Stop here'
+      payload: '/stop_brief_cope'
+
+  utter_ask_brief_cope_answer.score_21:
+  - text: "I've been expressing my negative feelings."
+    buttons:
+    - title: 'Never'
+      payload: '/brief_cope_options_never{{ "brief_cope_answer.score_21": 1 }}'
+    - title: 'Sometimes'
+      payload: '/brief_cope_options_sometimes{{ "brief_cope_answer.score_21": 2 }}'
+    - title: 'Often'
+      payload: '/brief_cope_options_often{{ "brief_cope_answer.score_21": 3 }}'
+    - title: 'Always'
+      payload: '/brief_cope_options_always{{ "brief_cope_answer.score_21": 4 }}'
+    - title: 'Stop here'
+      payload: '/stop_brief_cope'
+
+  utter_ask_brief_cope_answer.score_22:
+  - text: "I've been trying to find comfort in my religion or spiritual beliefs."
+    buttons:
+    - title: 'Never'
+      payload: '/brief_cope_options_never{{ "brief_cope_answer.score_22": 1 }}'
+    - title: 'Sometimes'
+      payload: '/brief_cope_options_sometimes{{ "brief_cope_answer.score_22": 2 }}'
+    - title: 'Often'
+      payload: '/brief_cope_options_often{{ "brief_cope_answer.score_22": 3 }}'
+    - title: 'Always'
+      payload: '/brief_cope_options_always{{ "brief_cope_answer.score_22": 4 }}'
+    - title: 'Stop here'
+      payload: '/stop_brief_cope'
+
+  utter_ask_brief_cope_answer.score_23:
+  - text: "I've been trying to get advice or help from other people about what."
+    buttons:
+    - title: 'Never'
+      payload: '/brief_cope_options_never{{ "brief_cope_answer.score_23": 1 }}'
+    - title: 'Sometimes'
+      payload: '/brief_cope_options_sometimes{{ "brief_cope_answer.score_23": 2 }}'
+    - title: 'Often'
+      payload: '/brief_cope_options_often{{ "brief_cope_answer.score_23": 3 }}'
+    - title: 'Always'
+      payload: '/brief_cope_options_always{{ "brief_cope_answer.score_23": 4 }}'
+    - title: 'Stop here'
+      payload: '/stop_brief_cope'
+
+  utter_ask_brief_cope_answer.score_24:
+  - text: "I've been learning to live with it."
+    buttons:
+    - title: 'Never'
+      payload: '/brief_cope_options_never{{ "brief_cope_answer.score_24": 1 }}'
+    - title: 'Sometimes'
+      payload: '/brief_cope_options_sometimes{{ "brief_cope_answer.score_24": 2 }}'
+    - title: 'Often'
+      payload: '/brief_cope_options_often{{ "brief_cope_answer.score_24": 3 }}'
+    - title: 'Always'
+      payload: '/brief_cope_options_always{{ "brief_cope_answer.score_24": 4 }}'
+    - title: 'Stop here'
+      payload: '/stop_brief_cope'
+
+  utter_ask_brief_cope_answer.score_25:
+  - text: "I've been thinking hard about what steps to take."
+    buttons:
+    - title: 'Never'
+      payload: '/brief_cope_options_never{{ "brief_cope_answer.score_25": 1 }}'
+    - title: 'Sometimes'
+      payload: '/brief_cope_options_sometimes{{ "brief_cope_answer.score_25": 2 }}'
+    - title: 'Often'
+      payload: '/brief_cope_options_often{{ "brief_cope_answer.score_25": 3 }}'
+    - title: 'Always'
+      payload: '/brief_cope_options_always{{ "brief_cope_answer.score_25": 4 }}'
+    - title: 'Stop here'
+      payload: '/stop_brief_cope'
+
+  utter_ask_brief_cope_answer.score_26:
+  - text: "I've been blaming myself for things that happened"
+    buttons:
+    - title: 'Never'
+      payload: '/brief_cope_options_never{{ "brief_cope_answer.score_26": 1 }}'
+    - title: 'Sometimes'
+      payload: '/brief_cope_options_sometimes{{ "brief_cope_answer.score_26": 2 }}'
+    - title: 'Often'
+      payload: '/brief_cope_options_often{{ "brief_cope_answer.score_26": 3 }}'
+    - title: 'Always'
+      payload: '/brief_cope_options_always{{ "brief_cope_answer.score_26": 4 }}'
+    - title: 'Bstop here'
+      payload: '/stop_brief_cope'
+
+  utter_ask_brief_cope_answer.score_27:
+  - text: "I've been praying or meditating."
+    buttons:
+    - title: 'Never'
+      payload: '/brief_cope_options_never{{ "brief_cope_answer.score_27": 1 }}'
+    - title: 'Sometimes'
+      payload: '/brief_cope_options_sometimes{{ "brief_cope_answer.score_27": 2 }}'
+    - title: 'Often'
+      payload: '/brief_cope_options_often{{ "brief_cope_answer.score_27": 3 }}'
+    - title: 'Always'
+      payload: '/brief_cope_options_always{{ "brief_cope_answer.score_27": 4 }}'
+    - title: 'Stop here'
+      payload: '/stop_brief_cope'
+
+  utter_ask_brief_cope_answer.score_28:
+  - text: "I've been making fun of the situation."
+    buttons:
+    - title: 'Never'
+      payload: '/brief_cope_options_never{{ "brief_cope_answer.score_28": 1 }}'
+    - title: 'Sometimes'
+      payload: '/brief_cope_options_sometimes{{ "brief_cope_answer.score_28": 2 }}'
+    - title: 'Often'
+      payload: '/brief_cope_options_often{{ "brief_cope_answer.score_28": 3 }}'
+    - title: 'Always'
+      payload: '/brief_cope_options_always{{ "brief_cope_answer.score_28": 4 }}'
+    - title: 'Stop here'
+      payload: '/stop_brief_cope'

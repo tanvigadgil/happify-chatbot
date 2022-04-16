@@ -1,0 +1,177 @@
+version: "3.0"
+
+nlu:
+  - intent: ask_mental_disorder_description
+    examples: |
+      - What is [Agorofobia]{ "entity": "mental_disorder" }
+      - What is meant by [anorexia nervosa]{ "entity": "mental_disorder" }
+      - What is meant by [autism]{ "entity": "mental_disorder" }
+      - [Bad Mood]{ "entity": "mental_disorder" } What is that
+      - [bruxism] { "entity": "mental_disorder" } What's it
+      - Understanding of [bulimia nervosa]{ "entity": "mental_disorder" } What is it
+      - Understanding of [Delirium]{ "entity": "mental_disorder" } What's it
+      - Explain what is meant by [Delusional]{ "entity": "mental_disorder" }
+
+  - intent: ask_mental_disorder_types
+    examples: |
+      - Type of disorder [agoraphobia]{ "entity": "mental_disorder" }
+      - What kind of disorder is [anorexia nervosa]{ "entity": "mental_disorder" }
+      - Explain the types of disorder [autism]{ "entity": "mental_disorder" }
+      - [badMood] { "entity": "mental_disorder" } what type is it
+      - How many types of disorder from [bruxism]{ "entity": "mental_disorder" }
+      - Disorders [bulimia nervosa]{ "entity": "mental_disorder" } what kind of thing is it
+      - Is the [delirium] disorder{ "entity": "mental_disorder" } have different types - different
+      - kinds of types of disorder [delusional]{ "entity": "mental_disorder" }
+
+  - intent: ask_mental_disorder_signs_and_symptoms
+    examples: |
+      - Signs of disorder [agoraphobia]{ "entity": "mental_disorder" }
+      - Symptoms of disorder [anorexia nervosa]{ "entity": "mental_disorder" }
+      - What a sign of [autism] disorders{ "entity": "mental_disorder" }
+      - What are the symptoms of disorder [bad mood]{ "entity": "mental_disorder" }
+      - Signs and Symptoms of [Bruxism] Disorders{ "entity": "mental_disorder" } anything
+      - Disorders [bulimia nervosa]{ "entity": "mental_disorder" } the sign is anything
+      - [delirium] disorder{ "entity": "mental_disorder" }what are the symptoms
+      - what are the signs and symptoms of disorder [delusional]{ "entity": "mental_disorder" }
+
+  - intent: ask_mental_disorder_causes
+    examples: |
+      - Causes of disorder [agoraphobia]{ "entity": "mental_disorder" }
+      - What are the causes of disorder [Anorexia nervosa]{ "entity": "mental_disorder" }
+      - What are the causes of disorder [autism]{ "entity": "mental_disorder" }
+      - Disorders [bad mood] { "entity": "mental_disorder" } What causes
+      - Disorders [bruxism] { "entity": "mental_disorder" } what causes are it
+      - Disorders [bulimia nervosa] { "entity": "mental_disorder" } What causes
+      - what caused the appearance of [delirium] disorders { "entity": "mental_disorder" }
+      - Delusional disorder { "entity": "mental_disorder" } what happens
+  
+  - intent: ask_mental_disorder_diagnosis
+    examples: |
+      - Diagnosis of interference [agoraphobia]{ "entity": "mental_disorder" } anything
+      - What is the diagnosis of disorder [anorexia nervosa]{ "entity": "mental_disorder" }
+      - how to diagnose disorder [autism]{ "entity": "mental_disorder" }
+      - How to diagnose disorder [bad mood]{ "entity": "mental_disorder" }
+      - How to Diagnose [Bruxism] Disorders{ "entity": "mental_disorder" }
+      - whatever is done to diagnose disorder [bulimia nervosa]{ "entity": "mental_disorder" }
+      - Steps taken to diagnose [delirium] disorders{ "entity": "mental_disorder" }
+      - What steps are done to diagnose [delusional] disorders{ "entity": "mental_disorder" }
+
+  - intent: ask_mental_disorder_complications
+    examples: |
+      - Complications of disorder [agoraphobia]{ "entity": "mental_disorder" }
+      - What are the complications of disorder [anorexia nervosa]{ "entity": "mental_disorder" }
+      - What complications can be experienced by disorder [autism]{ "entity": "mental_disorder" }
+      - Impact of complications from disorder [bad mood]{ "entity": "mental_disorder" }
+      - What are the impact of complications from [bruxism] disorders{ "entity": "mental_disorder" }
+      - what disorders [bulimia nervosa] what complications
+      - [delirium] disorder{ "entity": "mental_disorder" } aWhat are the complications
+      - State complications [delusional]{ "entity": "mental_disorder" }
+
+  - intent: ask_mental_disorder_how_to_treat
+    examples: |
+      - How to handle [agorafobia]{ "entity": "mental_disorder" }
+      - What ways can be used to handle [anorexia nervosa]{ "entity": "mental_disorder" }
+      - whatever is needed to handle [autism]{ "entity": "mental_disorder" }
+      - anything that can be done to handle [bad mood]{ "entity": "mental_disorder" }
+      - What handling can be done to handle [Bruxism]{ "entity": "mental_disorder" }
+      - What to do to deal with distractions [bulimia nervosa]{ "entity": "mental_disorder" }
+      - How to handle [delirium] disorders{ "entity": "mental_disorder" } What to do
+      - Delusional disorder{ "entity": "mental_disorder" } how to handle it
+
+  - intent: ask_mental_disorder_how_to_prevent
+    examples: |
+      - Prevention of disorder [agoraphobia]{ "entity": "mental_disorder" }
+      - Prevent disorder [anorexia nervosa]{ "entity": "mental_disorder" }
+      - How to prevent disorder [Autism]{ "entity": "mental_disorder" }
+      - How do you prevent disorder [bad mood]{ "entity": "mental_disorder" }
+      - Disorders [bruxism]{ "entity": "mental_disorder" } What prevention is
+      - Disorders [bulimia nervosa] Prevented How
+      - What efforts do for prevention of disorder [delirium]{ "entity": "mental_disorder" }
+      - What efforts are made to prevent disorder [delusional]{ "entity": "mental_disorder" }
+
+  - intent: ask_mental_disorder_when_to_consult
+    examples: |
+      - When to consult when having a disturbance
+      - Is it needed to consult when experiencing an interference
+      - Should Consultation When I have an interference
+      - When experiencing a disturbance whether it needs consultation
+
+  - intent: ask_mental_disorder_preparation_before_consulting
+    examples: |
+      - whatever needs to be prepared before consultation
+      - What needs are needed before conducting consultations
+      - What is needed before consultation
+      - Need to prepare themselves before consultation
+
+  - intent: ask_mental_disorder_during_the_consultation
+    examples: |
+      - Approximately which questions will be asked by the doctor when conducting consultations
+      - What questions are asked when conducting consultations
+      - What questions arise when doing consultations
+      - When conducting a consultation what will the doctor ask
+
+  - lookup: mental_disorder 
+    examples: |
+      - Agorofobia
+      - Anorexia nervosa
+      - Autism
+      - Bad Mood
+      - Bruxism
+      - bulimia nervosa
+      - Delirium
+      - Delusional
+      - Depression
+      - Post-labor depression
+      - Fobia
+      - Handap
+      - Gaming disorder
+      - Bipolar
+      - Dismorphic body
+      - Dissociative identity (double personality)
+      - Social anxiety
+      - General anxiety
+      - Personality
+      - threshold personality
+      - Antisosial Personality
+      - Narcissistic personality
+      - Paranoid Personality
+      - Developmental coordination
+      - Eating disorder
+      - Panic
+      - Catering and hyperactivity (ADHD)
+      - Acute stress
+      - Sleep walking
+      - Nervous
+      - Hallucinations
+      - Hipersomnia
+      - Insomnia
+      - Katatonia
+      - Addiction to alcohol
+      - Food addiction
+      - Nicotine addiction
+      - Kleptomania
+      - Nightmare
+      - Narcolepsi
+      - Obsessive compulsive disorder (OCD)
+      - oppositional defiant disorder
+      - Paraphilia.
+      - Parenting Stress.
+      - Pedophilia
+      - Alzheimer's disease
+      - Change of attitude
+      - Post Traumatic Disorder (PTSD)
+      - Proliced Grief Disorder
+      - Psychosis
+      - Postpartum psychosis
+      - Mental retardation
+      - Asperger's syndrome
+      - Munchausen's syndrome
+      - Schizophrenia
+      - Katatonic schizophrenia
+      - Paranoid schizophrenia
+      - Sleep Paralysis
+      - Sleepwalking
+      - Stress
+      - Substance Abuse Disorder
+      - Trikotilomania
+      - Trypophobia

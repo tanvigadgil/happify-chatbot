@@ -1,0 +1,161 @@
+version: "3.0"
+
+nlu: 
+  - intent: mental_health_faq/the_mean_of_having_mental_illness
+    examples: |
+      - What is meant by mental disease or disorder
+      - What exactly is meant by a disease or mental disorder
+      - What does it mean to have a disease or mental disorder
+      - What it means to suffer from a disease or mental disorder
+      - What exactly is meant by suffering from a disease or mental disorder
+
+  - intent: mental_health_faq/causes_of_mental_illness
+    examples: |
+      - Who can get a disease or mental disorder
+      - Anyone who can get mental disease or disorder
+      - Who is affected by a mental disease or disorder
+      - Mental disorders can be about anyone
+      - What causes disease or mental disorders
+      - What causes the emergence of diseases or mental disorders
+      - What causes the emergence of a disease or mental disorder
+      - The emergence of diseases or mental disorders is caused by what
+
+  - intent: mental_health_faq/warning_signs_of_mental_illness
+    examples: |
+      - any signs that indicate a disease or mental disorder
+      - What are signs that indicate a disease or mental disorder
+      - Disease or mental disorders of any signs
+      - a sign that shows any disease or mental disorders
+      - Signs of symptoms that show any disease or mental disorders
+
+  - intent: mental_health_faq/can_mental_illness_recovered
+    examples: |
+      - whether people with diseases or mental disorders can heal
+      - Whether people who suffer from disease or mental disorders can heal
+      - People who suffer from disease or mental disorders whether they can recover
+      - Mental disease or disorders can be cured
+
+  - intent: mental_health_faq/someone_who_have_mental_illness
+    examples: |
+      - what should I do if I know someone who seems to have symptoms of a disease or mental disorder
+      - What can be done if we know someone who seems to have symptoms of a disease or mental disorder
+      - If we know someone who has symptoms of a disease or mental disorder, what can we do
+      - What can we do if we know someone who has symptoms of a disease or mental disorder
+      - We can do what if we know someone who has symptoms of a disease or mental disorder
+
+  - intent: mental_health_faq/how_to_find_mental_health_professional
+    examples: |
+      - how can I find mental health professionals for myself or my relatives
+      - How to find mental health experts for myself or my relatives
+      - How to find professional mental health for myself or my relatives
+      - Where can I look for psychologists or psychiatrists for myself or my relatives
+
+  - intent: mental_health_faq/available_treatment_options
+    examples: | 
+      - What treatment options are available
+      - What treatment is available
+      - What types of treatments are available
+      - What are the available treatment options
+
+  - intent: mental_health_faq/involved_in_treatment
+    examples: |
+      - If I am involved in treatment, what I need to know
+      - what I need to know if I'm involved in treatment
+      - What things need to know if we are involved in the treatment process
+      - whatever needs to be considered if we are involved in a treatment process
+      - When we are involved in treatment, what we need to know
+
+  - intent: mental_health_faq/mental_health_professional_diffrences
+    examples: |
+      - what is the world of mental health
+      - What is the difference between different kinds of mental health professional
+      - What distinguishes between the many professionals in the field of mental health
+      - Types of any mental health professionals
+      - I am confused by the many experts in the field of mental health, what is the difference
+
+  - intent: mental_health_faq/where_else_to_get_help
+    examples: |
+      - where else can I get help
+      - Where do I have to get help for my problem
+      - I am confused where to go to overcome my problem
+      - I don't know what to do or anywhere else because of my problem
+      - where I can get help from
+
+  - intent: mental_health_faq/before_starting_new_medication
+    examples: |
+      - what should I know before starting a new treatment
+      - What things you need to know before starting a treatment
+      - anything you need to know when you want to start a new treatment
+      - Before starting new treatments, things to pay attention to
+      - I am confused when starting a new treatment, what ashould I need to know
+
+  - intent: mental_health_faq/is_after_taking_medication_cured
+    examples: |
+      - if I feel better after taking medicine, does this mean I get well and can stop drinking it
+      - If I feel better after routine drinking medicine, does it mean I have healed
+      - After taking the medicine given by the doctor and I feel better, does I have healed
+      - The drug that I drink can make myself better, can I stop drinking it
+      - I feel good after taking medicine, whether it can be said to have healed me and can I stop taking the medicine
+
+  # - intent: mental_health_faq/get_help_for_paying_medication
+  #   examples: |
+  #     - how can I get help paying for my medicine
+  #     - I don't have enough money to pay for my treatment, what should I do?
+  #     - Where can I get money to pay for my treatment
+  #     - What should I do if I don't have enough money to pay for my medicine
+  #     - How to get help to pay for my medicine, if I don't have enough money
+
+  - intent: mental_health_faq/find_the_right_therapy
+    examples: |
+      - Based on what type of therapy can be fairly effective
+      - How to determine that this therapy is more effective than other therapy I have ever gone through
+      - which therapy can be fairly effective
+      - How do I find the right therapy for me
+      - how to determine therapy that suits me
+      - Looking for the right therapy for my problem, what do you do?
+
+  - intent: mental_health_faq/learn_types_of_mental_health_treatment
+    examples: |
+      - Where can I learn about this type of mental health care
+      - Where can I learn about the type of mental health care
+      - Any type of mental health care
+      - What kind of care for dealing with mental health
+      - Where can I learn about this type of mental health care
+
+  - intent: mental_health_faq/diffrent_types_of_mental_health_professionals
+    examples: |
+      - What types of mental health professionals
+      - Any type of mental health field?
+      - I am confused with various types of mental health professionals, what type is it
+      - Difference from every type of profession of any mental health
+
+  - intent: mental_health_faq/find_support_group
+    examples: |
+      - where I can search for support groups or support systems
+      - How to find the right support system for me
+      - Where can I get a support group for me
+      - I need a support system, where do I get the Support System
+      - How to find the right support group
+
+  - intent: mental_health_faq/find_inpatient_care
+    examples: |
+      - Where can I look for inpatient care
+      - Where can I find an inpatient place
+      - Do I need to find an inpatient place
+      - How severe until someone has to find an inpatient place
+
+  - intent: mental_health_faq/find_other_local_services
+    examples: |
+      - where can I find other local services
+      - Where can I find local aid services in my place
+      - How do I look for help services in my area
+      - I am confused looking for a place of service near my place
+      - To find local services, where do I have to start?
+
+  - intent: mental_health_faq/learn_more_about_clinical_trials
+    examples: |
+      - Where can I learn more information about clinical trials
+      - Where can I find more information about clinical trials
+      - where to learn information about clinical trials can from
+      - I want to learn about clinical trials, where do I have to look
+      - Information about clinical trials can be searched from where

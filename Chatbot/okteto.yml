@@ -1,0 +1,12 @@
+name: rasa-server
+autocreate: true
+image: okteto.dev/rasa-bot:latest
+command: bash
+volumes:
+- /root/.cache/pip
+sync:
+- .:/app
+forward:
+- 5005:5005
+reverse:
+- 9000:9000
